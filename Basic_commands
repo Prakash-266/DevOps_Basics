@@ -65,6 +65,8 @@ DOCKER  -->  It is a tool which is used to creat the light weight containers and
 		container to img creation     -- docker commit  jpc1 Njpimg2
 		file to img creation          -- docker build -t Njpimg3 . -f files
 		mapping                       -- docker run -t newc3 --privileged=ture --volumes-from jpimg /bin/bash
+
+
 JENKINS SETUP --> Jenkins is an open-source automation server used to automate parts of the software development process, especially building, testing, and deploying code.
 		1.install java 			--yum install java17 -y #if u want specific java version --yum whatprovides java
 		2.download jenkins from web	--sudo weget -0 url
