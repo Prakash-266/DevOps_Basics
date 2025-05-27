@@ -3,6 +3,7 @@ DEVOPS
 
 CLOUD TRAIL --> is a web service that records API activity in your AWS account								
 CLOUD WATCH -->is a monitoring service for AWS resources and application 
+
 GIT --> open-source version control system that enables you to store code & SCM
         branching feature 
              a bit knwldge on cmds.
@@ -36,19 +37,19 @@ GTIHUB -->  GitHub provides code sharing and code development tools to more than
 MAVEN --> One of the devops tool which is used to creat the build files 
 		it is used to deploy easy and file size also light in size
 	
-		yum intsall java
+		yum install java
 		wget <maven  file ot download>
-		tar xvzf <maven file> -/opt  (extract)
+		tar xvzf <maven file> -C /opt  (extract)
 		TO SET PATH		
-		export M2_HOME=/OPT/<MAVEN FILE>
-		export PATH=$PATH$M2_HOME/bin/bash
+		export M2_HOME=/OPT/<MAVEN FILE> #This sets an environment variable called M2_HOME to point to your Maven installation directory..
+		export PATH=$PATH:$M2_HOME/bin/bash
 		mvn archetype:generate
 		cd <arifcat name> then excuate thhis 3 cmds
-                 1 -- mvn compile
+                 1 -- mvn compile #it will convert human language to machine language 
 		 2 -- mvn test
-		 3 -- mvn compile
+		 3 -- mvn package
 		AFTER mvn install 
-                 then you see the location of the files 
+                 then you can see the location of the files 
 
 
 DOCKER  -->  It is a tool which is used to creat the light weight containers and  containerization is the process which is used to  create ,deploy and run         		the application a bit of knowledge on D.commands 
@@ -59,11 +60,20 @@ DOCKER  -->  It is a tool which is used to creat the light weight containers and
 	 	status,name,port,cid          -- docker ps -a
 		display images                -- docker images
 		start container               -- docker start jpc1
-		into container                -- docker attach jpc1
+		into container                -- docker attach jpc1 or docker exec --it <container_name> /bin/bash
 		Rename container              -- docker rename cid newc4 
 		container to img creation     -- docker commit  jpc1 Njpimg2
 		file to img creation          -- docker build -t Njpimg3 . -f files
 		mapping                       -- docker run -t newc3 --privileged=ture --volumes-from jpimg /bin/bash
+JENKINS SETUP --> Jenkins is an open-source automation server used to automate parts of the software development process, especially building, testing, and deploying code.
+		1.install java 			--yum install java17 -y #if u want specific java version --yum whatprovides java
+		2.download jenkins from web	--sudo weget -0 url
+		3.download dependences		--sudo rpm url
+		4.upgrade and install      	--yum upgrade & yum install jenkins -y
+		5.enable and restart 		--systemctl enable jenkins & systemctl start jenkins & for status use systemctl jenkins status 
+		6.set port number as 8080 in the aws or use command line like --java -jar jenkins.war --httpPort=9090
+		7.copy the ip and add :8080 like ---192.32.22:8080 and paste in web browser 
+		8.open jenkins and ask use name and password and its show the path for password so from that path we can get password for jenkins 
 
 
 
