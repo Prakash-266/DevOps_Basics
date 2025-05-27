@@ -1,0 +1,99 @@
+
+DEVOPS
+
+CLOUD TRAIL --> is a web service that records API activity in your AWS account								
+CLOUD WATCH -->is a monitoring service for AWS resources and application 
+GIT --> open-source version control system that enables you to store code & SCM
+        branching feature 
+             a bit knwldge on cmds.
+		yum install git -y 
+		check version			-- git --version {workiing area installed } or git -v
+                index or staging & local repo	-- git init .
+		mv f1 woking to satging		-- git add
+		display file status 		-- git status
+		mv f1 index to local repo	-- git commit -m "version1"
+		show files in local repo 	-- git log or git log --oneline
+		see data in 1 file 		--git show < commit id >	
+   create a user cmds 																							creating user 			--git config --global user.name "jaya"
+		git config email		--global user.email "jp@17gmail.com"
+		git config name 		--global user.name "jaya_prakash"
+		check the user 		 	-- git config --list
+  ABOUT BRANCHES 
+ 		Creating branching   	 	--git branch -m "main"	
+		Login into branch		--git checkout branchname	
+ 		Create & login 			--git checkout -b "main"
+  connection b/w git - gtuhub 			
+		LINK GIT -GITHUB CMD		--git remote add origin < github repo URL >
+                Verify        			--git remote --v
+   PUSH CMD 
+		push to github 			--git push -u origin <branch name>
+   
+GTIHUB -->  GitHub provides code sharing and code development tools to more than 7 million people around the world.
+             known topic - create the repo 
+			   checking thr versioning
+			   creating tokens
+			    
+MAVEN --> One of the devops tool which is used to creat the build files 
+		it is used to deploy easy and file size also light in size
+	
+		yum intsall java
+		wget <maven  file ot download>
+		tar xvzf <maven file> -/opt  (extract)
+		TO SET PATH		
+		export M2_HOME=/OPT/<MAVEN FILE>
+		export PATH=$PATH$M2_HOME/bin/bash
+		mvn archetype:generate
+		cd <arifcat name> then excuate thhis 3 cmds
+                 1 -- mvn compile
+		 2 -- mvn test
+		 3 -- mvn compile
+		AFTER mvn install 
+                 then you see the location of the files 
+
+
+DOCKER  -->  It is a tool which is used to creat the light weight containers and  containerization is the process which is used to  create ,deploy and run         		the application a bit of knowledge on D.commands 
+		istallation                   -- yum intsall docker -y 
+		check version                 -- docker --version           
+                creating image                -- docker run -it jpimg /bin/bash
+		creating container with name  -- docker run -it --name jpc1 jpimg /bin/bash
+	 	status,name,port,cid          -- docker ps -a
+		display images                -- docker images
+		start container               -- docker start jpc1
+		into container                -- docker attach jpc1
+		Rename container              -- docker rename cid newc4 
+		container to img creation     -- docker commit  jpc1 Njpimg2
+		file to img creation          -- docker build -t Njpimg3 . -f files
+		mapping                       -- docker run -t newc3 --privileged=ture --volumes-from jpimg /bin/bash
+
+
+
+KUBERNETE -->  Automation the deploment and scaling and managing containers as well 
+	       
+		setup kubectl 			--Go to website and search for kubectl & copy the link and paste in linux to download 
+		setup minikube			--Go to the website and search for minikube & copy the URL and paste in linux to download 
+		To start the minikube 		-- minikube start 
+		
+	CLUSTER CMDS 
+			cluster info		-- kubectl cluster -info
+			cluster ip 		-- kubectl get service
+			cluster deployment	--kubectl get deployment or kkubectl get deploy
+	NODE CMDS
+			check nodes		--kubectl get nodes
+	PODS CMDS 
+			create pods 		--kubectl run pod1 --image html :latest	
+			login into pods 	--kubectl exec pod1 --it pod pod1 /bin/bash
+			pod ip 			--kubectl get pod -o wide 
+			check pods 		--kubectl get po or pods
+			All pods info 		--kubectl get po -A
+			delete pod 		--kubectl delete pod podname 	
+	CONTAINER INFO
+			check pods & conatiners --kubectl describe pod podname
+			
+	REPLICA SET
+			check replica set	--kubectl get rs
+	YAML SCRIPT 
+    			IF ITS YOUR 1ST TIIME TO CREATE YMAL FILE USE THIS BELOW CMD
+				kubectl create -f jp-pod
+
+			AFTER CERATION OF YAML SCRIPT WE USE THIS CMD T APPLY THE SCRIT IN YOUR LINUC MACHINE
+				kubectl apply -f jp-pod
