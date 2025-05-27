@@ -6,7 +6,7 @@ CLOUD WATCH -->is a monitoring service for AWS resources and application
 
 GIT --> open-source version control system that enables you to store code & SCM
         branching feature 
-             a bit knwldge on cmds.
+             a bit knowledge on cmds.
 		yum install git -y 
 		check version			-- git --version {workiing area installed } or git -v
                 index or staging & local repo	-- git init .
@@ -28,8 +28,7 @@ GIT --> open-source version control system that enables you to store code & SCM
                 Verify        			--git remote --v
    PUSH CMD 
 		push to github 			--git push -u origin <branch name>
-   
-GTIHUB -->  GitHub provides code sharing and code development tools to more than 7 million people around the world.
+GITHUB -->GitHub is a web-based platform and aslo a hosting service for Git repositories used for version control and collaboration on software projects.
              known topic - create the repo 
 			   checking thr versioning
 			   creating tokens
@@ -52,8 +51,8 @@ MAVEN --> One of the devops tool which is used to creat the build files
                  then you can see the location of the files 
 
 
-DOCKER  -->  It is a tool which is used to creat the light weight containers and  containerization is the process which is used to  create ,deploy and run         		the application a bit of knowledge on D.commands 
-		istallation                   -- yum intsall docker -y 
+DOCKER  -->  It is a tool which is used to creat the light weight containers and  containerization is the process which is used to  create ,deploy and run the application 
+		installation                   -- yum intsall docker -y 
 		check version                 -- docker --version           
                 creating image                -- docker run -it jpimg /bin/bash
 		creating container with name  -- docker run -it --name jpc1 jpimg /bin/bash
@@ -64,7 +63,10 @@ DOCKER  -->  It is a tool which is used to creat the light weight containers and
 		Rename container              -- docker rename cid newc4 
 		container to img creation     -- docker commit  jpc1 Njpimg2
 		file to img creation          -- docker build -t Njpimg3 . -f files
-		mapping                       -- docker run -t newc3 --privileged=ture --volumes-from jpimg /bin/bash
+		create network		      --docker network create my_network
+		create volume		      --docker volume create my_voume
+		remove stoped container	      --docker container prune		
+		mapping                       -- docker run -t newc3 --privileged=true --volumes-from jpimg /bin/bash
 
 
 JENKINS SETUP --> Jenkins is an open-source automation server used to automate parts of the software development process, especially building, testing, and deploying code.
@@ -107,5 +109,5 @@ KUBERNETE -->  Automation the deploment and scaling and managing containers as w
     			IF ITS YOUR 1ST TIIME TO CREATE YMAL FILE USE THIS BELOW CMD
 				kubectl create -f jp-pod
 
-			AFTER CERATION OF YAML SCRIPT WE USE THIS CMD T APPLY THE SCRIT IN YOUR LINUC MACHINE
+			AFTER CERATION OF YAML SCRIPT WE USE THIS CMD To APPLY THE SCRIT IN YOUR LINUC MACHINE
 				kubectl apply -f jp-pod
