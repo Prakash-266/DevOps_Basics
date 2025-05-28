@@ -68,6 +68,28 @@ DOCKER  -->  It is a tool which is used to creat the light weight containers and
 		remove stoped container	      --docker container prune		
 		mapping                       -- docker run -t newc3 --privileged=true --volumes-from jpimg /bin/bash
 
+       DOCKER_FILE -->A Dockerfile is a script containing instructions on how to build a Docker image. 
+         
+         BASIC_STRUCTURE OF DOCKER_FILE STRUCTURE-
+
+             	FROM 	: This specifies the base image to build
+		WORKDIR : This specifies the 'working directory' path in image where files will be copied and commands will be executed.
+		COPY 	: This instruction specifies to copy files from the host and put them into the container image
+		RUN 	: This instruction tells the builder to run a specific command
+		ENV 	: This instruction sets environment variable that a running container will use
+		Expose 	: This specifies to expose the image to a specific port number
+
+	EXAMPLE-	FROM ubuntu 
+			WORKDIR /app
+			CP . /app
+			RUN useradd my-user USER my-user ~docker build -t my-image ~docker run -it --name ubuntu-1 my-image bash
+			Expose 5000
+			CMD ["python", "app.py"]
+
+
+
+
+
 
 JENKINS SETUP --> Jenkins is an open-source automation server used to automate parts of the software development process, especially building, testing, and deploying code.
 		1.install java 			--yum install java17 -y #if u want specific java version --yum whatprovides java
