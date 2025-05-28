@@ -52,7 +52,7 @@ MAVEN --> One of the devops tool which is used to creat the build files
 
 
 DOCKER  -->  It is a tool which is used to creat the light weight containers and  containerization is the process which is used to  create ,deploy and run the application 
-		installation                   -- yum intsall docker -y 
+		installation                   -- yum install docker -y 
 		check version                 -- docker --version           
                 creating image                -- docker run -it jpimg /bin/bash
 		creating container with name  -- docker run -it --name jpc1 jpimg /bin/bash
