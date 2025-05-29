@@ -64,6 +64,11 @@ DOCKER  -->  It is a tool which is used to creat the light weight containers and
 		container to img creation     -- docker commit  jpc1 Njpimg2
 		file to img creation          -- docker build -t Njpimg3 . -f files
 		create network		      --docker network create my_network
+		list all docker n/w	      -- docker network ls
+		view details of n/w 	      --docker network_name inspect
+		connect exixting container    --docker network connect n_name container_name
+		disconnect n/w with container -- docker network diconnect n_name container_name
+		connect running container     --docker run --network n_name img_name
 		create volume		      --docker volume create my_voume
 		remove stoped container	      --docker container prune		
 		mapping                       -- docker run -t newc3 --privileged=true --volumes-from jpimg /bin/bash
@@ -79,16 +84,12 @@ DOCKER  -->  It is a tool which is used to creat the light weight containers and
 		ENV 	: This instruction sets environment variable that a running container will use
 		Expose 	: This specifies to expose the image to a specific port number
 
-	EXAMPLE-	FROM ubuntu 
+	     EXAMPLE-	FROM ubuntu 
 			WORKDIR /app
 			CP . /app
 			RUN useradd my-user USER my-user ~docker build -t my-image ~docker run -it --name ubuntu-1 my-image bash
 			Expose 5000
 			CMD ["python", "app.py"]
-
-
-
-
 
 
 JENKINS SETUP --> Jenkins is an open-source automation server used to automate parts of the software development process, especially building, testing, and deploying code.
@@ -100,6 +101,9 @@ JENKINS SETUP --> Jenkins is an open-source automation server used to automate p
 		6.set port number as 8080 in the aws or use command line like --java -jar jenkins.war --httpPort=9090
 		7.copy the ip and add :8080 like ---192.32.22:8080 and paste in web browser 
 		8.open jenkins and ask use name and password and its show the path for password so from that path we can get password for jenkins 
+	GITHUB-JENKINS PLUGIN SETUP STEPS 
+	 1.
+	
 
 
 
