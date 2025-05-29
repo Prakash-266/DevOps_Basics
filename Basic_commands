@@ -102,8 +102,15 @@ JENKINS SETUP --> Jenkins is an open-source automation server used to automate p
 		7.copy the ip and add :8080 like ---192.32.22:8080 and paste in web browser 
 		8.open jenkins and ask use name and password and its show the path for password so from that path we can get password for jenkins 
 	GITHUB-JENKINS PLUGIN SETUP STEPS 
-	 1.
-	
+	1.After giving password its shows two options.click on  'Install suggested plugins' its takes to install so have to wait sometime
+	2.and ask username details fil it up and nxt its shows jenkins url if u want copy it and click on save and finish then jenkis ready to use 
+	3.then install github plugin to make a connection b/w githubb and jenkins
+	4.For that go to MANAGE JENKINS and search as GIT PLUGIN and click INSTALL WITHOUT RESTART 
+	5.Go to github and create token for that go to profile>settings>develop settings>tocken(classic) and finish settings and copy & save that token
+	6.go to jenkins and click on NEW ITEM and fill decribtion select FREESTYLE PROJECT then PICK GIT option 
+	7.Here we have to paste the github url and token and name and click save and add branch 
+	8.comes to home page and click on BUILD_NOW to execute the build-test-delopy process
+	9.to see the output go to console output and you can check work space
 
 
 
