@@ -111,9 +111,10 @@ JENKINS SETUP --> Jenkins is an open-source automation server used to automate p
 	6.go to jenkins and click on NEW ITEM and fill decribtion select FREESTYLE PROJECT then PICK GIT option 
 	7.Here we have to paste the github url and token and name and click save and add branch 
 	8.comes to home page and click on BUILD_NOW to execute the build-test-delopy process
-	9.to see the output go to console output and you can check work space
+	9.to see the output go to console output and you can check WORKSPACE in jenkins-cli path is(/var/lib/jenkins/workspace/)
 
-DIFFERENCE OF GITHUB AND GITHUB_WEBHOOK PLUGIN
+	
+	DIFFERENCE OF GITHUB AND GITHUB_WEBHOOK PLUGIN
 	
 	Feature		Jenkins GitHub Plugin		GitHub Webhook to Jenkins
 	-------------------------------------------------------------------------
