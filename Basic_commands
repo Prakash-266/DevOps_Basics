@@ -106,13 +106,25 @@ JENKINS SETUP --> Jenkins is an open-source automation server used to automate p
 	2.and ask username details fil it up and nxt its shows jenkins url if u want copy it and click on save and finish then jenkis ready to use 
 	3.then install github plugin to make a connection b/w githubb and jenkins
 	4.For that go to MANAGE JENKINS and search as GIT PLUGIN and click INSTALL WITHOUT RESTART 
-	5.Go to github and create token for that go to profile>settings>develop settings>tocken(classic) and finish settings and copy & save that token
+	5.Go to github and create token for that go to profile>settings>development settings>personal_tocken>tocken(classic)>create token and finish settings and copy & save that token
 	6.go to jenkins and click on NEW ITEM and fill decribtion select FREESTYLE PROJECT then PICK GIT option 
 	7.Here we have to paste the github url and token and name and click save and add branch 
 	8.comes to home page and click on BUILD_NOW to execute the build-test-delopy process
 	9.to see the output go to console output and you can check work space
 
+DIFFERENCE OF GITHUB AND GITHUB_WEBHOOK PLUGIN
+	
+	Feature		Jenkins GitHub Plugin		GitHub Webhook to Jenkins
+	-------------------------------------------------------------------------
+	Trigger Type	Polling				Push/event-based (webhook)
+	Speed		Slower (scheduled checks)	Faster (real-time)
+	Efficiency	Less efficient			More efficient
+	Setup Location	Jenkins	GitHub 			repository settings
+	Use Cases	General GitHub integration	Auto-trigger builds on changes
 
+For real-time builds: Use GitHub Webhooks.
+ WEBHOOK --GitHub sends an HTTP POST to Jenkins (at a URL like http://your-jenkins.com/github-webhook/).
+ GITHUB  --You need to enable "Poll SCM" and set a schedule like * * * * * to check every minute.even if there is nothing updates.
 
 KUBERNETE -->  Automation the deploment and scaling and managing containers as well 
 	       
