@@ -101,6 +101,7 @@ JENKINS SETUP --> Jenkins is an open-source automation server used to automate p
 		6.set port number as 8080 in the aws or use command line like --java -jar jenkins.war --httpPort=9090
 		7.copy the ip and add :8080 like ---192.32.22:8080 and paste in web browser 
 		8.open jenkins and ask use name and password and its show the path for password so from that path we can get password for jenkins 
+
 	GITHUB-JENKINS PLUGIN SETUP STEPS 
 	1.After giving password its shows two options.click on  'Install suggested plugins' its takes to install so have to wait sometime
 	2.and ask username details fil it up and nxt its shows jenkins url if u want copy it and click on save and finish then jenkis ready to use 
