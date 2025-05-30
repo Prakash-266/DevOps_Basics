@@ -122,9 +122,12 @@ DIFFERENCE OF GITHUB AND GITHUB_WEBHOOK PLUGIN
 	Setup Location	Jenkins	GitHub 			repository settings
 	Use Cases	General GitHub integration	Auto-trigger builds on changes
 
-For real-time builds: Use GitHub Webhooks.
- WEBHOOK --GitHub sends an HTTP POST to Jenkins (at a URL like http://your-jenkins.com/github-webhook/).
- GITHUB  --You need to enable "Poll SCM" and set a schedule like * * * * * to check every minute.even if there is nothing updates.
+	For real-time builds: Use GitHub Webhooks.
+ 		-->WEBHOOK --GitHub sends an HTTP POST to Jenkins (at a URL like http://your-jenkins.com/github-webhook/).
+ 				"" Jenkins -> Manage Jenkins -> Manage Plugins -> Install github integration plugin ""
+
+		 -->GITHUB  --You need to enable "Poll SCM" and set a schedule like * * * * * to check every minute.even if there is nothing updates.
+
 
 KUBERNETE -->  Automation the deploment and scaling and managing containers as well 
 	       
