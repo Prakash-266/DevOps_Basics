@@ -1,5 +1,10 @@
 
-DEVOPS
+⚙️ Example Workflow in DevOps
+    1.Developer writes code and pushes to Git repository (e.g., GitHub).
+    2.CI pipeline runs automated tests (e.g., via Jenkins or GitLab CI).
+    3.If tests pass, the code is automatically deployed to a staging or production server (CD).
+    4.Monitoring tools like Datadog or Prometheus track performance.
+    5.Issues are logged and fed back into development.
 
 CLOUD TRAIL --> is a web service that records API activity in your AWS account								
 CLOUD WATCH -->is a monitoring service for AWS resources and application 
@@ -10,12 +15,16 @@ GIT --> open-source version control system that enables you to store code & SCM
 		yum install git -y 
 		check version			-- git --version {workiing area installed } or git -v
                 index or staging & local repo	-- git init .
-		mv f1 woking to satging		-- git add
+		mv f1 woking to satging		-- git add   
+		used to unstage a file		--git revert –staged file .
+		restore your changes later	-- git stash
+		Restore a specific stash in list--git stash apply stash@{1}
 		display file status 		-- git status
 		mv f1 index to local repo	-- git commit -m "version1"
 		show files in local repo 	-- git log or git log --oneline
 		see data in 1 file 		--git show < commit id >	
-   create a user cmds 																							creating user 			--git config --global user.name "jaya"
+create a user cmds 
+		creating user 			--git config --global user.name "jaya"
 		git config email		--global user.email "jp@17gmail.com"
 		git config name 		--global user.name "jaya_prakash"
 		check the user 		 	-- git config --list
@@ -50,8 +59,7 @@ MAVEN --> One of the devops tool which is used to creat the build files
 		AFTER mvn install 
                  then you can see the location of the files 
 
-
-DOCKER  -->  It is a tool which is used to creat the light weight containers and  containerization is the process which is used to  create ,deploy and run the application 
+DOCKER  -->  It is a tool which is used to create the light weight containers and  containerization is the process which is used to  create ,deploy and run the application 
 		installation                   -- yum install docker -y 
 		check version                 -- docker --version           
                 creating image                -- docker run -it jpimg /bin/bash
@@ -62,7 +70,7 @@ DOCKER  -->  It is a tool which is used to creat the light weight containers and
 		into container                -- docker attach jpc1 or docker exec --it <container_name> /bin/bash
 		Rename container              -- docker rename cid newc4 
 		container to img creation     -- docker commit  jpc1 Njpimg2
-		file to img creation          -- docker build -t Njpimg3 . -f files
+		d.file to img creation        -- docker build -t Njpimg3 . -f files
 		create network		      --docker network create my_network
 		list all docker n/w	      -- docker network ls
 		view details of n/w 	      --docker network_name inspect
@@ -91,7 +99,6 @@ DOCKER  -->  It is a tool which is used to creat the light weight containers and
 			Expose 5000
 			CMD ["python3", "app.py"]
 
-
 JENKINS SETUP --> Jenkins is an open-source automation server used to automate parts of the software development process, especially building, testing, and deploying code.
 		1.install java 			--yum install java17 -y #if u want specific java version --yum whatprovides java
 		2.download jenkins from web	--sudo weget -0 url
@@ -104,7 +111,7 @@ JENKINS SETUP --> Jenkins is an open-source automation server used to automate p
 
 	GITHUB-JENKINS PLUGIN SETUP STEPS 
 	1.After giving password its shows two options.click on  'Install suggested plugins' its takes to install so have to wait sometime
-	2.and ask username details fil it up and nxt its shows jenkins url if u want copy it and click on save and finish then jenkis ready to use 
+	2.and ask username details fill it up and nxt its shows jenkins url if u want copy it and click on save and finish then jenkis ready to use 
 	3.then install github plugin to make a connection b/w githubb and jenkins
 	4.For that go to MANAGE JENKINS and search as GIT PLUGIN and click INSTALL WITHOUT RESTART 
 	5.Go to github and create token for that go to profile>settings>development settings>personal_tocken>tocken(classic)>create token and finish settings and copy & save that token
@@ -129,7 +136,6 @@ JENKINS SETUP --> Jenkins is an open-source automation server used to automate p
  				"" Jenkins -> Manage Jenkins -> Manage Plugins -> Install github integration plugin ""
 
 		 -->GITHUB  --You need to enable "Poll SCM" and set a schedule like * * * * * to check every minute.even if there is nothing updates.
-
 
 KUBERNETE -->  Automation the deploment and scaling and managing containers as well 
 	       
