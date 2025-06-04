@@ -39,7 +39,7 @@ create a user cmds
 		push to github 			--git push -u origin <branch name>
 GITHUB -->GitHub is a web-based platform and aslo a hosting service for Git repositories used for version control and collaboration on software projects.
              known topic - create the repo 
-			   checking thr versioning
+			   checking the versioning
 			   creating tokens
 			    
 MAVEN --> One of the devops tool which is used to creat the build files 
@@ -70,7 +70,7 @@ DOCKER  -->  It is a tool which is used to create the light weight containers an
 		into container                -- docker attach jpc1 or docker exec --it <container_name> /bin/bash
 		Rename container              -- docker rename cid newc4 
 		container to img creation     -- docker commit  jpc1 Njpimg2
-		d.file to img creation        -- docker build -t Njpimg3 . -f files
+		d.file to img creation        -- docker build -t Njpimg3 . -f Docker_file
 		create network		      --docker network create my_network
 		list all docker n/w	      -- docker network ls
 		view details of n/w 	      --docker network_name inspect
@@ -79,7 +79,7 @@ DOCKER  -->  It is a tool which is used to create the light weight containers an
 		connect running container     --docker run --network n_name img_name
 		create volume		      --docker volume create my_voume
 		remove stoped container	      --docker container prune		
-		mapping                       -- docker run -t newc3 --privileged=true --volumes-from jpimg /bin/bash
+		mapping                       -- docker run -it --privileged --volumes-from jpimg newc3 /bin/bash
 
        DOCKER_FILE -->A Dockerfile is a script containing instructions on how to build a Docker image. 
          
@@ -92,7 +92,7 @@ DOCKER  -->  It is a tool which is used to create the light weight containers an
 		ENV 	: This instruction sets environment variable that a running container will use
 		Expose 	: This specifies to expose the image to a specific port number
 
-	     EXAMPLE-	FROM Pythn3.5.0
+	     EXAMPLE-	FROM Python3.5.0
 			WORKDIR /app
 			CP . /app
 			RUN useradd my-user USER my-user ~docker build -t my-image ~docker run -it --name ubuntu-1 my-image bash
@@ -162,16 +162,16 @@ TOMCAT_SETUP --> which is an open-source web server and servlet container. It's 
 		6.To set user_name and paasword to login when we access website for that change to  apache-tomcat-9.0.87  and follow steps
 			#cd  apache-tomcat-9.0.87 
 			#cd conf #ls #vim tomcat.users.xml 
-		7.make changes in tomcat.users.xml  file and make remaining part as comment with  <!-- <valve ............    .............0:0:1 /> -->
+		7.make changes in TOMCAT.USERS.XML  file and make remaining part as comment with  <!-- <valve ............    .............0:0:1 /> -->
 			<tomcat-users>
 			<roles relename="manager-gui"/>
 			<user username="tomcat" password="tomcat" roles="manager-gui"/>
 			</tomcat-users>
-		8.After that we have to stop and  start for update the changes for that we have to come back to apache-tomcat-9.0.87 and  move to bin folder 
+		8.After that we have to stop and  start for update the changes for that we have to come back to apache-tomcat-9.0.87 and  move to BIN_FOLDER 
 			#cd .. #cd bin #ls #sh startup.sh (then it indicate that tomcat started)
-		9.change to apache-tomcat-9.0.87 folder and then flow the path and do changes in context.xml to access in web
+		9.change to apache-tomcat-9.0.87 folder and then flow the path and do changes in CONTEXT.XML to access in web
 			#cd .. #cd webapps #cd manager #cd META-INF #vim context.xml
-		10.In  context.xml make all the lines as comments excpet last lines and startup.sh one more time to reflect the changes
+		10.In  CONTEXT.XML make all the lines as comments excpet last lines and startup.sh one more time to reflect the changes
 				<context.............>
 					<cookiepro.............>
 						<!--value/-->(MAKING THIS LINE AS COMMENT)
