@@ -69,6 +69,7 @@ DOCKER  -->  It is a tool which is used to create the light weight containers an
 		start container               -- docker start jpc1
 		into container                -- docker attach jpc1 or docker exec --it <container_name> /bin/bash
 		Rename container              -- docker rename cid newc4 
+		inspect a Docker container    --docker inspect <container_name_or_id>
 		container to img creation     -- docker commit  jpc1 Njpimg2
 		d.file to img creation        -- docker build -t Njpimg3 . -f Docker_file
 		create network		      --docker network create my_network
