@@ -45,7 +45,11 @@ GITHUB -->GitHub is a web-based platform and aslo a hosting service for Git repo
 MAVEN --> One of the devops tool which is used to creat the build files 
 		it is used to deploy easy and file size also light in size
 	
-		yum install java
+	The SQL CASE Expression
+
+The CASE expression goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
+
+If there is no ELSE part and no conditions are true, it returns NULL.	yum install java
 		wget <maven  file ot download>
 		tar xvzf <maven file> -C /opt  (extract)
 		TO SET PATH		
@@ -79,7 +83,10 @@ DOCKER  -->  It is a tool which is used to create the light weight containers an
 		disconnect n/w with container -- docker network diconnect n_name container_name
 		connect running container     --docker run --network n_name img_name
 		create volume		      --docker volume create my_voume
+		attch volume to img	      --docker run -v myvolume:/app/data myapp
 		remove stoped container	      --docker container prune		
+		expose container ports	      --docker -p 8080:80 image	 		
+		to your host machine. 
 		mapping                       -- docker run -it --privileged --volumes-from jpimg newc3 /bin/bash
 
        DOCKER_FILE -->A Dockerfile is a script containing instructions on how to build a Docker image. 
@@ -210,6 +217,28 @@ KUBERNETE -->  Automation the deploment and scaling and managing containers as w
 	YAML SCRIPT 
     			IF ITS YOUR 1ST TIIME TO CREATE YMAL FILE USE THIS BELOW CMD
 				kubectl create -f jp-pod
-
 			AFTER CERATION OF YAML SCRIPT WE USE THIS CMD To APPLY THE SCRIT IN YOUR LINUC MACHINE
 				kubectl apply -f jp-pod
+Cron job syntax format:
+
+* * * * * command_to_execute
+- - - - -
+| | | | |
+| | | | +----- Day of week (0 - 7) (Sunday=0 or 7)
+| | | +------- Month (1 - 12)
+| | +--------- Day of month (1 - 31)
+| +----------- Hour (0 - 23)
++------------- Minute (0-60)
+
+EXAMPLE-
+-->30 1 * * 0 /usr/bin/find /tmp -type f -mtime +7 -exec rm {} \;
+
+ -->Run a script every 15 minutes
+*/15 * * * * /home/user/scripts/check_status.sh
+Runs check_status.sh every 15 minutes.
+
+-->5. Send a report email at 8 AM on weekdays (Mon-Fri)
+0 8 * * 1-5 /home/user/scripts/send_report.sh
+Runs the send_report.sh script at 8 AM every Monday through Friday.
+
+			
