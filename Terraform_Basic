@@ -1,0 +1,60 @@
+Terraform defination - Terraform is an open-source Infrastructure as Code (IaC) tool developed by HashiCorp 
+                        that allows you to define, provision, and manage cloud infrastructure using declarative configuration files.
+
+Benefits of Using Terraform
+                        -->Version-controlled infrastructure
+                        -->Reusable and modular configs
+                        -->Multi-cloud support
+                        -->Safe and predictable deployments
+In this terraform we have few impotant files that we have to know and we have to mainatain .tf extention for this files to identify easily
+                1.main.tf
+                2.variable.tf
+                3.output.tf 
+
+1.main.tf - which is aslo called as main configuration file
+                -->Defines the provider (e.g., AWS, Azure).
+                -->Declares resources to create (e.g., EC2 instance, S3 bucket).
+                -->This is the core file where your infrastructure is described.
+        Example-        provider "aws" {
+                                region  = "us-east-1"
+                                profile = var.aws_profile
+                                }
+                        resource "aws_instance" "example" {
+                                ami  = "ami-xxxxxxx"
+                                instance_type = var.instance_type  #where we mention in the variable.tf file so takes the t2.larger instance type 
+                                                            }
+
+2.variable.tf - which is aslo called as input file
+                -->Declares variables you can pass into your configuration.
+                -->Helps make your code reusable and flexible
+        Example -
+                        variable "instance_type" {
+                        description = "The instance type"
+                        type        = string
+                        default     = "t2.large"  
+
+
+3.ouput.tf -Shows important results after Terraform runs and  Useful for displaying IP addresses, resource IDs, etc.
+        Example - output "instance_id" {
+                  value = aws_instance.example.id
+                                        }
+
+TERRAFORM_COMMANDS
+------------------
+
+        | Command              | Purpose                        |
+        | -------------------- | ------------------------------ |
+        | `terraform init`     | Initialize the project         |
+        | `terraform plan`     | Preview changes                |
+        | `terraform apply`    | Apply/provision infrastructure |
+        | `terraform destroy`  | Delete resources               |
+        | `terraform show`     | Show current state             |
+        | `terraform output`   | Display output variables       |
+        | `terraform validate` | Check for syntax errors        |
+        | `terraform fmt`      | Format your code               |
+
+
+
+
+--this is the place where we can get provides or any type of syntax which is used in main.tf file
+        https://registry.terraform.io/providers/hashicorp/aws/latest/docs 
