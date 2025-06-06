@@ -18,6 +18,7 @@ GIT --> open-source version control system that enables you to store code & SCM
 		mv f1 woking to satging		-- git add   
 		used to unstage a file		--git revert –staged file .
 		restore your changes later	-- git stash
+		Shows the list of saved stashes -- git stash list
 		Restore a specific stash in list--git stash apply stash@{1}
 		display file status 		-- git status
 		mv f1 index to local repo	-- git commit -m "version1"
@@ -144,6 +145,29 @@ JENKINS SETUP --> Jenkins is an open-source automation server used to automate p
  				"" Jenkins -> Manage Jenkins -> Manage Plugins -> Install github integration plugin ""
 
 		 -->GITHUB  --You need to enable "Poll SCM" and set a schedule like * * * * * to check every minute.even if there is nothing updates.
+
+     DECLARATIVE METHOD-Jenkins does not have built-in file-change triggers without plugins or hooks, but you can use polling combined with the when directive inside a declarative pipeline.
+			Example (poll every 5 mins, run only if a specific file changed):
+		
+	pipeline {
+    agent any
+    triggers {
+        pollSCM('H/5 * * * *')  // Poll every 5 minutes
+    }
+    stages {
+        stage('Run if file changed') {
+            when {
+                changeset "src/app.py"
+            }
+            steps {
+                echo "src/app.py changed; running pipeline"
+                sh 'python src/app.py'
+            }
+        }
+    }
+}
+
+
 
 TOMCAT_SETUP --> which is an open-source web server and servlet container. It's used to deploy and run Java web applications.
 		main folders and files we have to know (apache-tomcat-9.0.87,conf--tomcat.users.xml,bin--startup.sh,webapps--META-INF--context.xml)
