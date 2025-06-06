@@ -9,7 +9,10 @@
 CLOUD TRAIL --> is a web service that records API activity in your AWS account								
 CLOUD WATCH -->is a monitoring service for AWS resources and application 
 
-GIT --> open-source version control system that enables you to store code & SCM
+GIT --> open-source version control system, A version control system (VCS) is a program or set of programs that tracks changes to a collection of files.
+	One goal of a VCS is to easily recall earlier versions of individual files or of the entire project.
+	Another goal is to allow several team members to work on a project, even on the same files, at the same time without affecting each other's work.
+	Another name for a VCS is a software configuration management (SCM) system. 
         branching feature 
              a bit knowledge on cmds.
 		yum install git -y 
@@ -46,11 +49,7 @@ GITHUB -->GitHub is a web-based platform and aslo a hosting service for Git repo
 MAVEN --> One of the devops tool which is used to creat the build files 
 		it is used to deploy easy and file size also light in size
 	
-	The SQL CASE Expression
-
-The CASE expression goes through conditions and returns a value when the first condition is met (like an if-then-else statement). So, once a condition is true, it will stop reading and return the result. If no conditions are true, it returns the value in the ELSE clause.
-
-If there is no ELSE part and no conditions are true, it returns NULL.	yum install java
+	yum install java
 		wget <maven  file ot download>
 		tar xvzf <maven file> -C /opt  (extract)
 		TO SET PATH		
