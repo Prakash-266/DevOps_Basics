@@ -38,6 +38,21 @@ MAVEN_LIFE_CYCLE
 5.install       -mvn install
 6.Deploy(to server)
 
+  INSTALLATION  MAVEN               
+                    yum install java
+		wget <maven  file ot download>
+		tar xvzf <maven file> -C /opt  (extract)
+		TO SET PATH		
+		export M2_HOME=/OPT/<MAVEN FILE> #This sets an environment variable called M2_HOME to point to your Maven installation directory..
+		export PATH=$PATH:$M2_HOME/bin/bash
+		mvn archetype:generate
+		cd <arifcat name> then excuate thhis 3 cmds
+                 1 -- mvn compile #it will convert human language to machine language 
+		 2 -- mvn test
+		 3 -- mvn package
+		AFTER mvn install 
+                 then you can see the location of the files 
+
 so we give a directory in artifact section that is the project directory_name
 After creating the structure
 curent location apache_mavem-3.8.6}# 
@@ -61,6 +76,7 @@ after compliation you get target directory
 --mvn package (then we will get jar,war file and it shows the path too actually save n target  folder)
 now we want to store that file in local repo
 --mvn install  (then see the path)
+
 ==========================================================================================================================================================================
  ANOTHER WAY OF TO USE MAVEN-GITHUB
 
