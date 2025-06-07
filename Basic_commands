@@ -46,9 +46,7 @@ GITHUB -->GitHub is a web-based platform and aslo a hosting service for Git repo
 			   checking the versioning
 			   creating tokens
 			    
-MAVEN --> One of the devops tool which is used to creat the build files 
-		it is used to deploy easy and file size also light in size
-	
+MAVEN --> maven is the project management or dependencie management tool which is used to create the no.of projects in a particular structure  
 	yum install java
 		wget <maven  file ot download>
 		tar xvzf <maven file> -C /opt  (extract)
