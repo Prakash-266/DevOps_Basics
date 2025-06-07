@@ -1,0 +1,86 @@
+-->whenever we want to deploy java_code application file to run in server for that we have to make sure that server have the java_software  to run that particular java_application
+so we can all that java_software as a dependencies
+-->POM (Projext Object Model)-use XML language in this file we have project related infomation
+-->in this process the java_file convert intlo jar ,var files then only we can deploy a code ina server
+About .jar & .tar & Ear files
+------------------------
+-whenever we complie the java_file it will convert into .jar file 
+-along with java_code we have xml,html in that file it will convert into .war file
+-cobination of .jar+tar file called as .Ear file
+
+Project_Structure
+source_code--->Project_Struture--->Dependencies/library--->Test--->Reporting
+
+Build_Tools
+.Net : V ishual_Studio
+c,c++:make file
+Java :Ant,Maven,Gradle
+
+MAVEN --> maven is the project management or dependencie management tool which is used to create the no.of projects in a particular structure
+          and developed by apache software foundation
+Architecture:
+
+
+                               build_System 
+                                
+                                POM.XML            --> CENREL_REPO
+        local repo  --->       -----------    
+                                  MAVEN            --> REMOTE_REPO
+                                    |
+                                  SITE
+
+MAVEN_LIFE_CYCLE
+-----------------
+1.generate a resources (source_Code)
+2.complie code  -mvn complie
+3.Test          -mvnn test
+4.package       -mvn package
+5.install       -mvn install
+6.Deploy(to server)
+
+so we give a directory in artifact section that is the project directory_name
+After creating the structure
+curent location apache_mavem-3.8.6}# 
+--check the list       -ll 
+--Go to directory      - cd diretory
+In that directory you can have pom.xml & src/ directory
+ inside the src  diretcory it creates 
+cd src/ -main/ test/ directories ,
+cd main/ -java/
+cd java/ -batch/
+cd batch -app.java file
+cat app.java --- we can see the simple hello world code
+full path -cd diretory/src/main/java/batch/
+=====
+move to directory for compile make sure when you use complile where the artifactid (directory in my exmaple)
+--mvn complie (use get success)
+now check --ll 
+after compliation you get target directory
+###moving inside -ls target/ - classes/(in this batch/) generated-sources maven-status ,,ls target/ classes/batch/app.class file (observe that out app.java convert into app.class)
+--mvn test (use get success)
+--mvn package (then we will get jar,war file and it shows the path too actually save n target  folder)
+now we want to store that file in local repo
+--mvn install  (then see the path)
+==========================================================================================================================================================================
+ ANOTHER WAY OF TO USE MAVEN-GITHUB
+
+1.copy the github repo url
+2.git clone url ##make sure that git installation
+3.ll ##it display repo directory
+4. we already install the maven and its dependencies(java_software) 
+5.cd github_repo
+6.mvn compile (build_success so we get target folder)
+7.mvn test (success)
+8.mvn package (convert the source_Code file into jar file)
+9.mvn install (it will save the .jar file into our local repo)
+it create .m2 directoryinto u r local repo
+
+ 
+
+
+
+
+
+
+
+
