@@ -1,10 +1,10 @@
 -->whenever we want to deploy java_code application file to run in server for that we have to make sure that server have the java_software  to run that particular java_application
 so we can all that java_software as a dependencies
 -->POM (Projext Object Model)-use XML language in this file we have project related infomation
--->in this process the java_file convert intlo jar ,var files then only we can deploy a code ina server
+-->in this process the java_file convert into,jar ,var files then only we can deploy a code in a server
 About .jar & .tar & Ear files
 ------------------------
--whenever we complie the java_file it will convert into .jar file 
+-whenever we compile the java_file it will convert into .jar file 
 -along with java_code we have xml,html in that file it will convert into .war file
 -cobination of .jar+tar file called as .Ear file
 
@@ -12,7 +12,7 @@ Project_Structure
 source_code--->Project_Struture--->Dependencies/library--->Test--->Reporting
 
 Build_Tools
-.Net : V ishual_Studio
+.Net : Visual_Studio
 c,c++:make file
 Java :Ant,Maven,Gradle
 
@@ -40,13 +40,13 @@ MAVEN_LIFE_CYCLE
 
   INSTALLATION  MAVEN               
                     yum install java
-		wget <maven  file ot download>
-		tar xvzf <maven file> -C /opt  (extract)
+		wget <https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz>
+		tar xvzf <pache-maven-3.9.10-bin.tar.gz> -C /opt  (extract)
 		TO SET PATH		
-		export M2_HOME=/OPT/<MAVEN FILE> #This sets an environment variable called M2_HOME to point to your Maven installation directory..
+		export M2_HOME=/OPT/<pache-maven-3.9.10> #This sets an environment variable called M2_HOME to point to your Maven installation directory..
 		export PATH=$PATH:$M2_HOME/bin/bash
 		mvn archetype:generate
-		cd <arifcat name> then excuate thhis 3 cmds
+		cd <arifcat name> then excuate this 3 cmds
                  1 -- mvn compile #it will convert human language to machine language 
 		 2 -- mvn test
 		 3 -- mvn package
@@ -59,7 +59,7 @@ curent location apache_mavem-3.8.6}#
 --check the list       -ll 
 --Go to directory      - cd diretory
 In that directory you can have pom.xml & src/ directory
- inside the src  diretcory it creates 
+ inside the src  directory it creates 
 cd src/ -main/ test/ directories ,
 cd main/ -java/
 cd java/ -batch/
@@ -67,7 +67,7 @@ cd batch -app.java file
 cat app.java --- we can see the simple hello world code
 full path -cd diretory/src/main/java/batch/
 =====
-move to directory for compile make sure when you use complile where the artifactid (directory in my exmaple)
+move to directory for compile .make sure when you use compile where the artifactid (directory in my example)
 --mvn complie (use get success)
 now check --ll 
 after compliation you get target directory
@@ -75,7 +75,7 @@ after compliation you get target directory
 --mvn test (use get success)
 --mvn package (then we will get jar,war file and it shows the path too actually save n target  folder)
 now we want to store that file in local repo
---mvn install  (then see the path)
+--mvn install  (then see the path in your local repo)
 
 ==========================================================================================================================================================================
  ANOTHER WAY OF TO USE MAVEN-GITHUB
@@ -89,12 +89,49 @@ now we want to store that file in local repo
 7.mvn test (success)
 8.mvn package (convert the source_Code file into jar file)
 9.mvn install (it will save the .jar file into our local repo)
-it create .m2 directoryinto u r local repo
+it create .m2 directory into u r local repo
 
- 
+Essential Files
+---------------
+1.POM.XML
+	This is the central configuration file in a Maven project. It contains:
 
+    Project metadata (groupId, artifactId, version)
+    Dependencies
+    Build configuration
+    Plugins
+    Repositories
+    Profiles
+	✅ Without this file, Maven cannot build your project.
+2.SRC
+	✅ This directory structure is essential for Maven to compile and test code properly.
 
+***INSTEAD OF USING mvn compile,mvn test,mvn package and mvn install***
+ we can use "mvn clean install"
+And it will:
+    Clean previous builds
+    Compile
+    Run tests
+    Package
+    Install
 
+maven -jekins
+--------------
+Maven Integration Plugin
+Git Plugin (or any other SCM you use)
+
+PIPELINE METHOD
+---------------
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                sh 'mvn clean install'
+            }
+        }
+    }
+}
 
 
 
