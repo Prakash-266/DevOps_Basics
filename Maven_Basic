@@ -40,11 +40,15 @@ MAVEN_LIFE_CYCLE
 
   INSTALLATION  MAVEN               
                     yum install java
-		wget <https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz>
+		wget https://dlcdn.apache.org/maven/maven-3/3.9.10/binaries/apache-maven-3.9.10-bin.tar.gz
+		
+           *****OPTIONAL******
 		tar xvzf <pache-maven-3.9.10-bin.tar.gz> -C /opt  (extract)
 		TO SET PATH		
 		export M2_HOME=/OPT/<pache-maven-3.9.10> #This sets an environment variable called M2_HOME to point to your Maven installation directory..
 		export PATH=$PATH:$M2_HOME/bin/bash
+	    ****OPTIONAL*******	
+		cd 
 		mvn archetype:generate
 		cd <arifcat name> then excuate this 3 cmds
                  1 -- mvn compile #it will convert human language to machine language 
