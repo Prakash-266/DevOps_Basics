@@ -88,6 +88,14 @@ DOCKER  -->  It is a tool which is used to create the light weight containers an
 		mapping                       -- docker run -it --privileged --volumes-from jpimg newc3 /bin/bash
 
        DOCKER_FILE -->A Dockerfile is a script containing instructions on how to build a Docker image. 
+	Default bridge network--> Containers can communicate using IP addresses.
+	Dockerfile--> A text file containing instructions (such as installing software, copying files, setting environment variables) that Docker uses to build an image
+	Image--> A read-only template created from a Dockerfile. It contains the application code, runtime, libraries, and everything else needed to run the application Think of it as a snapshot or blueprint for your container.
+	Container--> A runnable instance of an image. When you start an image, Docker creates a container—a running, isolated environment for your application
+		 You can have multiple containers running from the same image.
+	Docker Hub---> A public registry where you can find and share Docker images. You can also create private registries for your organization
+
+
          
          BASIC_STRUCTURE OF DOCKER_FILE STRUCTURE-
 
