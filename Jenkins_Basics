@@ -9,6 +9,8 @@ SETUP-
 		7.copy the ip and add :8080 like ---192.32.22:8080 and paste in web browser 
 		8.open jenkins and ask use name and password and its show the path for password so from that path we can get password for jenkins 
 
+FREESTYLE_METHOD-
+-----------------
 STEPS TO MAKE CONNECTIONS B/W GITHUB - GITHUB 
     Requirments -Install jenkins and running state
                 Install github and create a public repo 
@@ -40,14 +42,6 @@ STEPS TO MAKE CONNECTIONS B/W GITHUB - GITHUB
                         Make a change in your GitHub repository and push it
                         Jenkins should automatically trigger a build
     4.save and apply and then click manually build_with_parameters and its build the project 
-
-BUILD_TRIGGER_OPTIONS
-1.Trigger builds remotely (eg:from scripts)
-2.Build after other build builds
-3.Build periodicaly
-4.Github hook for trigger GITSCM polling 
-5.poll SCM
-
 
 
         
