@@ -1,0 +1,64 @@
+JENKINS  --> Jenkins is an open-source automation server used to automate parts of the software development process, especially building, testing, and deploying code.
+SETUP-
+		1.install java 			--yum install java17 -y #if u want specific java version --yum whatprovides java
+		2.download jenkins from web	--sudo weget -0 url
+		3.download dependences		--sudo rpm url
+		4.upgrade and install      	--yum upgrade & yum install jenkins -y
+		5.enable and restart 		--systemctl enable jenkins & systemctl start jenkins & for status use systemctl jenkins status 
+		6.set port number as 8080 in the aws or use command line like --java -jar jenkins.war --httpPort=9090
+		7.copy the ip and add :8080 like ---192.32.22:8080 and paste in web browser 
+		8.open jenkins and ask use name and password and its show the path for password so from that path we can get password for jenkins 
+
+STEPS TO MAKE CONNECTIONS B/W GITHUB - GITHUB 
+    Requirments -Install jenkins and running state
+                Install github and create a public repo 
+    1.Install plugins for github and git 
+        *Go to Manage Jenkins > Manage Plugins
+            -->github integration
+            -->git
+    2.Config Github Credentials in jenkins
+       *1st go to github create github credentials 
+         in github      -->gituhb profile settings > developer settings > personals access tokens > token (classic) > Generate new token (classic) >copy & save the token
+         in jenkins     -->After that go to Manage Jenkins > Manage Credentials > (global) 
+                        -->then fill Kind,ID and Secret (Paste GitHub_Token)
+    3.Configure Source Code Management
+        -->go to configuration > select the Git in source_code_mangement > give github_url and credentials > optional (origin,refspec)>save 
+
+            OPTIONAL (#select this option only if you want to set auto trigger when any changes occur in github(after push))
+        -->it asks build trigger option pick GitHub hook trigger for GITScm polling 
+           GITHUB  --> Go to your GitHub repository > Settings > Webhooks
+                     Add webhook
+                    Payload URL: http://<your-jenkins-server>/github-webhook/
+                    Replace <your-jenkins-server> with your Jenkins server’s public URL
+                    Content type: application/json
+                    Secret: (optional, but recommended for security)
+                    Events: Select Just the push event or Let me select individual events (e.g., Pushes and Pull Requests)
+                    Ensure the webhook is Active
+                    Click Add webhook
+            jenkins -->Save and Test the Integration
+                        Save your Jenkins job configuration
+                        Make a change in your GitHub repository and push it
+                        Jenkins should automatically trigger a build
+    4.save and apply and then click manually build_with_parameters and its build the project 
+
+BUILD_TRIGGER_OPTIONS
+1.Trigger builds remotely (eg:from scripts)
+2.Build after other build builds
+3.Build periodicaly
+4.Github hook for trigger GITSCM polling 
+5.poll SCM
+
+
+
+        
+
+
+
+
+            
+            
+
+
+
+
+    
